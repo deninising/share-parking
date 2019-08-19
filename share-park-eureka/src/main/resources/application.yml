@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: one
+---
+spring:
+  profiles: one
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: eureka-one
+      label: master
+      profile: dev
+---
+spring:
+  profiles: two
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: eureka-two
+      label: master
+      profile: dev
